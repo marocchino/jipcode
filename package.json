@@ -1,12 +1,14 @@
 {
   "name": "jipcode",
-  "version": "1.0.0",
+  "version": "2.0.31",
   "description": "jipcode porting from ruby",
   "main": "index.ts",
   "author": "marocchino",
   "license": "MIT",
   "private": false,
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
   "devDependencies": {
     "@types/jest": "^28.1.7",
     "csv2json": "^2.0.2",

@@ -1,5 +1,6 @@
+import fetch from "node-fetch";
 import prefectureCode from "./prefectureCode.json";
-const ZIPCODE_PATH = "./zipcode/latest";
+const ZIPCODE_URL = "https://marocchino.github.io/jipcode/latest";
 
 type Option = {
   prefectureCode?: boolean;
@@ -21,13 +22,13 @@ export const locate = async (
     return [];
   }
 
-  const path = `${ZIPCODE_PATH}/${zipcode.slice(0, 3)}.csv.json`;
+  const url = `${ZIPCODE_URL}/${zipcode.slice(0, 3)}.csv.json`;
 
   // get json
   try {
-    const addressesArray = ((await import(path)).default as string[][]).filter(
-      (address) => address[0] === zipcode
-    );
+    const response = await fetch(url);
+    const json = (await response.json()) as string[][];
+    const addressesArray = json.filter((address) => address[0] === zipcode);
 
     if (option.prefectureCode) {
       return addressesArray.map(extendedAddressFrom);
