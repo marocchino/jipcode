@@ -2,7 +2,7 @@
   "name": "jipcode",
   "version": "2.0.31",
   "description": "jipcode porting from ruby",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "author": "marocchino",
   "license": "MIT",
   "private": false,
@@ -20,6 +20,6 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "esbuild index.ts --bundle --minify --sourcemap --outfile=index.js"
+    "build": "esbuild index.ts --bundle --minify --format=esm --sourcemap --outfile=dist/index.js"
   }
 }

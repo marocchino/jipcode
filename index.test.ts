@@ -1,5 +1,4 @@
-import { locate } from "./index";
-import prefectureCode from "./prefectureCode.json";
+import { locate, prefectureCode } from "./index";
 
 describe("prefectureCode", () => {
   it("returns prefecture code hash", () => {
