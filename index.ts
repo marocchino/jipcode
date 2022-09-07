@@ -68,6 +68,7 @@ export const locate = async (
   zipcode: string,
   option: Option = {}
 ): Promise<Zipcode[]> => {
+  zipcode = zipcode.replace(/\D/g, "");
   if (zipcode.length !== 7 || !/^\d+$/.test(zipcode)) {
     return [];
   }

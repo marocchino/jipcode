@@ -19,6 +19,12 @@ describe("locate", () => {
     expect(await locate("0081234")).toEqual([]);
   });
 
+  it("returns when with hyphen", async () => {
+    expect(await locate("115-0051")).toEqual([
+      { city: "北区", prefecture: "東京都", town: "浮間", zipcode: "1150051" },
+    ]);
+  });
+
   it("returns when no options", async () => {
     expect(await locate("1150051")).toEqual([
       { city: "北区", prefecture: "東京都", town: "浮間", zipcode: "1150051" },
