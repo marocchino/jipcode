@@ -1,6 +1,6 @@
 {
   "name": "jipcode",
-  "version": "2.0.34",
+  "version": "2.0.35",
   "description": "jipcode porting from ruby",
   "main": "dist/index.js",
   "author": "marocchino",

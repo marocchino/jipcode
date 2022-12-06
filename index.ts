@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-const VERSION = "2.0.34";
+const VERSION = "2.0.35";
 const ZIPCODE_URL = `https://marocchino.github.io/jipcode/${VERSION}`;
 
 type Option = {
