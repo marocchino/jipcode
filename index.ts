@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-const VERSION = "2.0.36";
+const VERSION = "2.0.37";
 const ZIPCODE_URL = `https://marocchino.github.io/jipcode/${VERSION}`;
 
 type Option = {
@@ -50,7 +50,7 @@ export const prefectureCode: { [key: string]: number } = {
   岡山県: 33,
   広島県: 34,
   山口県: 35,
-  徳島県: 36,
+  徳島県: 37,
   香川県: 37,
   愛媛県: 38,
   高知県: 39,
